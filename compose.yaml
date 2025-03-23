@@ -12,10 +12,9 @@ services:
     environment:
       - DEBUG=False # set to "True" for local dev
 
-
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       memory: 256M
-    # healthcheck:
-    #   test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
